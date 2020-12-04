@@ -15,3 +15,4 @@ Desktop.ini
 #conf
 *.log
 /node_modules/
+/dist/
