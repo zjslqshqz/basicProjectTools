@@ -1,0 +1,16 @@
+# ide
+*.idea
+*.settings
+.buildpath
+.project
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#mac:
+.DS_Store
+
+#conf
+*.log
