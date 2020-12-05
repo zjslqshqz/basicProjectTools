@@ -45,15 +45,20 @@ graph TD
     A[js内 import 模块] --> |根据|B(optimization.splitChunks 过滤配置)
     B --> |生成并分离|C[公共模块js文件]
 ```
-# 顺序图
+## 缓存设置
 
-```mermaid
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    John-->>-Alice: I feel great!
-```
+简要概括：
+
+- `main bundle` 会随着自身的新增内容的修改，而发生变化。
+- `vendor bundle` 会随着自身的 module.id 的变化，而发生变化。
+- `manifest runtime` 会因为现在包含一个新模块的引用，而发生变化。
+
+第一个和最后一个都是符合预期的行为，vendor hash 发生变化是我们要修复的.
+
+> 固定在内容不变情况下，保持moduleId不变，进而保证哈内容希值不变,用与缓存保证
+
+修改设置:`optimization.moduleIds = deterministic`
+
 
 [webpack.docschina.org]: https://webpack.docschina.org
 

@@ -59,6 +59,7 @@ module.exports = {
         ]
     },
     optimization: {
+        moduleIds: 'deterministic', // 用于固定在内容不变情况下，保持moduleId，进而保证哈内容希值不变,用与缓存保证
         runtimeChunk: 'single',//防止多入口出错
         splitChunks: { // 批量分离符合规则的文件模块
             cacheGroups: { // 分组
