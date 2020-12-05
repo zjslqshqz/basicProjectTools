@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'CNTypeRJXKSW5';
+  src: url('./CNTypeRJXKSW5-R.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
 .hello{
   color: red;
+  font-family: 'CNTypeRJXKSW5';
+  &:after{
+    content:'';
+    width: 52px;
+    height: 46px;
+    background: url('./jingao.png') no-repeat;
+    display: block;
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "name":"zhengt",
+  "age":18,
+  "isHandsome":true,
+  "email":"hj_zhengt@163.com",
+  "address":{
+    "country":"China",
+    "province":"jiangsu",
+    "city":"nanjing"
+  },
+  "hobbys":[
+    {
+      "order":"first",
+      "name":"coding"
+    },
+    {
+      "order":"second",
+      "name":"fishing"
+    },
+    {
+      "order":"third",
+      "name":"whatever"
+    }
+  ]
+}
