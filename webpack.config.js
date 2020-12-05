@@ -59,6 +59,7 @@ module.exports = {
         ]
     },
     optimization: {
+        runtimeChunk: 'single',//防止多入口出错
         splitChunks: { // 批量分离符合规则的文件模块
             cacheGroups: { // 分组
                 vendor: {
