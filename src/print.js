@@ -1,3 +1,4 @@
+import _ from 'lodash';
 export default function printMe() {
-    console.log('来至独立文件 print.js!');
+    console.log(_.join(['头','身子'],'>'));
 }

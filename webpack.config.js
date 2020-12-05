@@ -24,7 +24,7 @@ module.exports = {
         print: './src/print.js',
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -57,5 +57,16 @@ module.exports = {
                 type: 'asset/resource',
             }
         ]
+    },
+    optimization: {
+        splitChunks: { // 批量分离符合规则的文件模块
+            cacheGroups: { // 分组
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/, // 正则路径
+                    name: 'node_modules',
+                    chunks: 'all',
+                },
+            },
+        }
     }
 };
